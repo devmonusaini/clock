@@ -36,18 +36,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    z-index: 1;
 }
 .clock span{
     position: absolute;
     transform: rotate(calc(30deg *var(--i)));
     inset: 12px;
     text-align: center;
+  z-index: 2;
 }
 .clock span b{
     transform: rotate(calc(-30deg *var(--i)));
     display: inline-block;
     font-size: 20px;
+    z-index: 3;
 }
 
 .clock::before{
@@ -57,12 +59,13 @@ body{
     height: 8px;
     border-radius: 50%;
     background-color: #fff;
-    z-index: 2;
+    z-index: 4;
 }
 .hand{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+   z-index: 3;
 }
 
 .hand i{
